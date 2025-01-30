@@ -1,0 +1,157 @@
+/* General Styles */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  /* border: 1px solid steelblue; */
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00457c;
+  color: #fff;
+  padding: 1em;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+main {
+  padding: 1em;
+}
+
+section {
+  margin: 2em 0;
+  background-color: aqua;
+}
+
+.course-work,
+.location,
+.certificate {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  background: #f4f4f4;
+}
+
+.certificate .filter-buttons button {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: #00457c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.certificate .courses .course-btn {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background: #6d4c41;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .certificate .courses .course-btn {
+    width: 100%;
+  }
+}
+
+/* New Styles for Main and Sections */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-template-rows: auto; /* Automatically adjust row height */
+  gap: 1rem; /* Spacing between grid items */
+}
+
+.t {
+  text-wrap: nowrap;
+}
+.course-work, 
+.location {
+  background-color: #f5f5f5; /* Optional: for visualization */
+  padding: 1rem;
+  border: 1px solid #ccc; /* Optional: adds a border for clarity */
+  display: flex; /* Use flexbox to structure content */
+  flex-direction: column;
+  justify-content: space-between; /* Ensures equal height for grid rows */
+}
+
+.certificate {
+  grid-column: 1 / -1; /* Spans the full width below the two columns */
+  background-color: #fafafa; /* Optional styling */
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Switch to single-column layout */
+  }
+
+  .certificate {
+    grid-column: auto; /* Default span for single-column layout */
+  }
+}
