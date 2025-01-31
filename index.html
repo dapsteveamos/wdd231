@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Dynamic Web Fundamentals - STEVE DAPRIM AMOS </title>
+    <title>WDD 231 - Dynamic Web Fundamentals - STEVE DAPRIM AMOS</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Steve Daprim Amos home page">
     <meta name="author" content="STEVE DAPRIM AMOS">
     <link rel="stylesheet" href="styles/styles.css">
@@ -16,23 +16,26 @@
 
 <body>
     <header>
-        <img class="selfie" src="images/profile.jpg" alt="My picture">
-        <h1 class="t">Steve Daprim Amos</h1>
+        <section class="header-top">
+          <img class="selfie" src="images/profile.jpg" alt="My picture"  loading="lazy">
+          <h1>Steve Daprim Amos</h1>
+        </section>
         <nav>
-            <button class="hamburger">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="https://github.com/dapsteveamos">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/steve-amos-ab910b282">LinkedIn</a></li>
-            </ul>
+          <!-- <button class="hamburger">&#9776;</button> -->
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="https://github.com/dapsteveamos">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/steve-amos-ab910b282">LinkedIn</a></li>
+          </ul>
         </nav>
+        <button class="hamburger">☰</button>
     </header>
 
     <main>
         <section class="course-work">
             <h2>Course Work</h2>
-            <ul>
+            <ul class="project">
                 <li>Project 1</li>
                 <li>Project 2</li>
                 <li>Project 3</li>
@@ -41,13 +44,11 @@
     
         <section class="location">
             <h2>Nigeria</h2>
-            <img src="images/nigeria map and flag.jpg" alt="map of nigeria and flag color">
-            <figcaption>Nigeria</figcaption>
+            <img class="nigimg" src="images/nigeria map and flag.jpg" alt="map of nigeria and flag color" loading="lazy">
+            <figcaption>Nigeria  </figcaption>
         </section>
     
-       
-    
-    <section class="certificate">
+        <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
                 <button id="filter-all">All</button>
@@ -63,7 +64,7 @@
                 <button class="course-btn wdd">WDD 231</button>
             </div>
         </section>
-    </main> 
+    </main>
 
     <footer>
         <p> &copy;<span id="currentYear"></span>🌈Steve Daprim Amos🌈 Rivers State, Nigeria</p>
