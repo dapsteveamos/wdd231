@@ -72,8 +72,23 @@ header.scrolled {
     z-index: 1000; 
 }
 
+/* Navigation styles for mobile */
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100%;
+    width: 60%;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    text-align: center;
+    transition: right 0.3s ease; /* Slide effect */
+    z-index: 1000; /* Ensure it appears above other content */
+}
 
-
+/* When the open class is added, show the navigation */
+.navigation.open {
+    right: 0; /* Slide in from the right */
 }
 
 /* 3. Group all heading elements for consistent styling */
