@@ -7,6 +7,8 @@
   /* ---------------------- HOMEPAGE PAGE SECTION --------------- */
   /* ----------------------------------------------------- */
 
+
+  
   header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -170,7 +172,7 @@
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--default-gap);
+    gap: var(evenly);
   }
 
   .card svg {
@@ -380,3 +382,5 @@
     gap: 7em;
   }
 }
+
+

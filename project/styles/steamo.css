@@ -27,7 +27,18 @@ body {
 
     --heading-font: 'Montserrat', sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
+
+    --glass-effect-bg: rgba(186, 192, 205, 0.55);
+    --blur-effect: blur(2.5rem);
+    --box-shadow-effect: 8px 8px 8px -6px rgba(0, 0, 0, 0.18);
+    --box-shadow-all-4sides: 0 0 2rem rgba(0, 0, 0, 0.18);
+    --box-shadow-all-4sides-cleaner: 0 0 2rem -5px rgba(0, 0, 0, 0.18);
+  
+    --default-gap: 2em;
+    --default-gap: 1em;
 }
+
+
 
 /* Original header styles */
 header {
@@ -534,6 +545,96 @@ section.adventures img {
     background-color: var(--accent1-color);
 }
 
+.cta-box {
+    gap: var(--default-gap);
+    justify-self: center;
+  }
+  
+  .btn-join,
+  .btn-explore {
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    box-shadow: var(--box-shadow-effect);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.25em 0.75em;
+    min-width: 5ch;
+    min-height: 4rem;
+    transition: transform 0.2s;
+  }
+  
+  .btn-join {
+    color: #444;
+    background-color: var(--secondary-color);
+  }
+  
+  .btn-explore {
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+
+  
+  :where(
+      nav ul,
+      .nav-links,
+      .social-links,
+      .socials-box,
+      .cta-box,
+      [role="switch"]
+    ) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-box {
+    gap: var(--default-gap);
+    justify-self: center;
+    position: absolute;
+    top: 450px; /* Adjust the value to control how far down it is from the top */
+    left: 0; /* Optional: Align it to the left edge */
+    width: 100%; /* Optional: Span the full width if necessary */
+}
+
+
+
+  .cta-box {
+    gap: var(--default-gap);
+    justify-self: center;
+  }
+  
+  .btn-join,
+  .btn-explore {
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    box-shadow: var(--box-shadow-effect);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.25em 0.75em;
+    min-width: 5ch;
+    min-height: 4rem;
+    transition: transform 0.2s;
+  }
+  
+  .btn-join {
+    color: #eae4e4;
+    background-color: #396E94;
+  }
+  
+  .btn-explore {
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  
+  .header-intro,
+  .socials-box,
+  .weather-box,
+  .events-box,
+  .spotlight {
+    border-radius: 0.5rem;
+  }
 
 
 /* Main Content */
@@ -704,3 +805,503 @@ form button {
 form button:hover {
     background-color: var(--accent1-color);
 }
+
+
+
+
+ /* --------------------- PARTNERS SECTION ------------------- */
+.partners {
+    overflow: hidden; /* Prevent logos from spilling outside the container */
+    padding-block: 2em;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23eef0f4' fill-opacity='1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.partners h2 {
+    color: #444;
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-block-end: 2em;
+}
+
+.partner-slide {
+    display: flex;
+    gap: 2rem; /* Space between logos */
+    animation: slide 15s linear infinite; /* Smooth and continuous scrolling */
+}
+
+.partner-slide img {
+    width: 165px; /* Fixed width for consistency */
+    height: auto;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100%); /* Start from outside the right */
+    }
+    to {
+        transform: translateX(-100%); /* Move completely to the left */
+    }
+}
+
+@media only screen and (min-width: 118.75em) {
+    .news-event-section-box,
+    .service-card-box,
+    .partners {
+        max-width: 50vw;
+        margin: 0 auto;
+    }
+
+    .header-box {
+        max-width: 118rem;
+    }
+
+    .mini-gallery-box,
+    .explore-text-box {
+        max-width: 50em;
+    }
+
+    .explore {
+        justify-content: center;
+        gap: 7em;
+    }
+}
+
+/* Fade-in animation for additional effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 118.75em) {
+    .news-event-section-box,
+    .service-card-box,
+    .partners {
+      max-width: 50vw;
+      margin: 0 auto;
+    }
+  
+    .header-box {
+      max-width: 118rem;
+    }
+  
+    .mini-gallery-box,
+    .explore-text-box {
+      max-width: 50em;
+    }
+  
+    .explore {
+      justify-content: center;
+      gap: 7em;
+    }
+  }
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  
+/* -------------OUR SERVICES ------------------ */
+
+.services-section {
+    display: grid;
+    place-items: center;
+    row-gap: 5rem;
+    padding-block: 2em 5em;
+  }
+  
+  .service-card-box {
+    display: grid;
+    gap: var(--default-gap);
+    width: 60%;
+  }
+  
+  .card svg {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--primary-color);
+  }
+  
+  .card h3 {
+    text-transform: uppercase;
+    font-family: var(--heading-font);
+  }
+  
+  .card {
+    text-align: center;
+    display: grid;
+    row-gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 1.5em 2em;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 3px var(--primary-color),
+      0 1rem 2rem -0.5rem var(--primary-color);
+    position: relative;
+  }
+  
+  /* ------------------EXPLORE SECTION--------------- */
+  
+  .explore {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.5em;
+    align-items: center;
+    justify-content: space-evenly;
+  
+    padding: 6em 4em;
+    background-color: #d68c45;
+  }
+  
+  .mini-gallery-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--default-gap);
+  }
+  
+  .mini-gallery-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-effect);
+  }
+  
+  .explore-text-box {
+    color: #000;
+    /* width: 35%; */
+    display: grid;
+    gap: var(--default-gap);
+    text-align: center;
+  }
+  
+  .explore-text-box h2 {
+    justify-self: center;
+  }
+
+/* -------------OUR SERVICES ------------------ */
+
+.services-section {
+    display: grid;
+    place-items: center;
+    row-gap: 5rem;
+    padding-block: 2em 5em;
+  }
+  
+  .service-card-box {
+    display: grid;
+    gap: var(--default-gap);
+    width: 60%;
+  }
+  
+  .card svg {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--primary-color);
+  }
+  
+  .card h3 {
+    text-transform: uppercase;
+    font-family: var(--heading-font);
+  }
+  
+  .card {
+    text-align: center;
+    display: grid;
+    row-gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 1.5em 2em;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 3px var(--primary-color),
+      0 1rem 2rem -0.5rem var(--primary-color);
+    position: relative;
+  }
+
+  .services-section {
+    display: grid;
+    place-items: center;
+    row-gap: 10rem;
+    padding-block: 5em 10em;
+  }
+
+  .service-card-box {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(evenly);
+  }
+
+
+  
+:where(.nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta-box {
+    gap: var(--default-gap);
+    justify-self: center;
+  }
+
+
+  /* Upcoming Event */
+  .header-intro,
+.socials-box,
+.weather-box,
+.events-box,
+.spotlight {
+  border-radius: 0.5rem;
+}
+
+
+/* -------------- NEWS-EVENTS-WEATHER-SECTION --------------- */
+.figure-box {
+    width: 80%;
+    border: 0.5rem solid;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em auto;
+    background-color: var(--default-color);
+  }
+  
+  .figure-box :not(img) {
+    padding: 1.5rem;
+  }
+  
+  .figure-box img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  
+  .figure-box h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: 2px solid underline;
+  }
+  
+  .news-event-section {
+    display: grid;
+    padding-block: 5em;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .news-event-section h2 {
+    font-family: var(--heading-font);
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .news-event-section-box {
+    display: grid;
+    gap: 5rem;
+    row-gap: 2em;
+    width: 95vw;
+  }
+  
+  .news-box {
+    grid-row: 1 / 5;
+    padding-block-end: 3em;
+    padding-inline: 1.5em;
+    background-color: rgba(214, 139, 69, 0.67);
+    position: relative;
+    gap: var(--default-gap);
+  }
+  
+  .news-box::before,
+  .news-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .news-box::before {
+    transform: skewX(20deg);
+    top: 5rem;
+    left: 10rem;
+    border: 2rem double #d68b453c;
+  }
+  
+  .news-box::after {
+    transform: skewX(-20deg);
+    top: -5rem;
+    right: -10rem;
+    border: 2rem dashed #d68b453c;
+  }
+  
+  .news-box h2 {
+    color: var(--primary-color);
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    text-decoration-color: var(--primary-color);
+    padding-block: 2rem;
+  }
+  
+  .weather-box {
+    color: var(--default-color);
+    padding: 1em 2em;
+    text-align: center;
+  }
+  
+  .events-box {
+    color: #000;
+    padding: 1em 2em;
+  }
+  
+  .events-box,
+  .weather-box,
+  .spotlight {
+    background-color: var(--primary-color);
+    padding-inline: 1em;
+    display: grid;
+    gap: 3rem;
+    box-shadow: 0 0 0 3px var(--primary-shade-2), var(--box-shadow-all-4sides);
+  }
+  
+  .event-details {
+    display: grid;
+    align-items: center;
+  }
+  
+  .events-box h2,
+  .weather-box h2,
+  .spotlight h2 {
+    color: var(--default-color);
+    text-decoration-color: var(--default-color);
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .events-box div {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .event-time {
+    background-color: #d68c45;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  
+  .event-time:hover {
+    box-shadow: 0 0 0.7rem 0.5rem var(--default-color);
+  }
+  
+  .event-time:active {
+    box-shadow: 0 0 0.5rem 0.3rem var(--default-color);
+  }
+  
+
+  
+/* -------------- NEWS-EVENTS-WEATHER-SECTION --------------- */
+.figure-box {
+    width: 80%;
+    border: 0.5rem solid;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em auto;
+    background-color: var(--default-color);
+  }
+  
+  .figure-box :not(img) {
+    padding: 1.5rem;
+  }
+  
+  .figure-box img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  
+  .figure-box h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: 2px solid underline;
+  }
+  
+  .news-event-section {
+    display: grid;
+    padding-block: 5em;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .news-event-section h2 {
+    font-family: var(--heading-font);
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .news-event-section-box {
+    display: grid;
+    gap: 5rem;
+    row-gap: 2em;
+    width: 95vw;
+  }
+  
+  .news-box {
+    grid-row: 1 / 5;
+    padding-block-end: 3em;
+    padding-inline: 1.5em;
+    background-color: rgba(214, 139, 69, 0.67);
+    position: relative;
+    gap: var(--default-gap);
+  }
+  
+  .news-box::before,
+  .news-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .news-box::before {
+    transform: skewX(20deg);
+    top: 5rem;
+    left: 10rem;
+    border: 2rem double #d68b453c;
+  }
+  
+  .news-box::after {
+    transform: skewX(-20deg);
+    top: -5rem;
+    right: -10rem;
+    border: 2rem dashed #d68b453c;
+  }
+  
+  .news-box h2 {
+    color: var(--primary-color);
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    text-decoration-color: var(--primary-color);
+    padding-block: 2rem;
+  }
+  
+  .weather-box {
+    color: var(--default-color);
+    padding: 1em 2em;
+    text-align: center;
+  }
+  
