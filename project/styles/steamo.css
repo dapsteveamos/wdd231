@@ -592,7 +592,7 @@ section.adventures img {
     gap: var(--default-gap);
     justify-self: center;
     position: absolute;
-    top: 450px; /* Adjust the value to control how far down it is from the top */
+    top: 480px; /* Adjust the value to control how far down it is from the top */
     left: 0; /* Optional: Align it to the left edge */
     width: 100%; /* Optional: Span the full width if necessary */
 }
