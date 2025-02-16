@@ -1153,14 +1153,9 @@ form button:hover {
     padding-block: 2rem;
   }
   
-  .weather-box {
-    color: var(--default-color);
-    padding: 1em 2em;
-    text-align: center;
-  }
-  
+
   .events-box {
-    color: #000;
+    color: #ddcbcb;
     padding: 1em 2em;
   }
   
@@ -1174,10 +1169,7 @@ form button:hover {
     box-shadow: 0 0 0 3px var(--primary-shade-2), var(--box-shadow-all-4sides);
   }
   
-  .event-details {
-    display: grid;
-    align-items: center;
-  }
+
   
   .events-box h2,
   .weather-box h2,
@@ -1198,7 +1190,7 @@ form button:hover {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.9s;
     text-align: center;
   }
   
@@ -1304,4 +1296,60 @@ form button:hover {
     padding: 1em 2em;
     text-align: center;
   }
-  
+  /* --------------------- OUR SERVICES SECTION ------------------- */
+.services-section {
+  display: grid;
+  place-items: center;
+  row-gap: 5rem; /* Adjust spacing between rows */
+  padding-block: 2em 5em; /* Top and bottom padding */
+}
+
+.service-card-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 2rem; /* Adjust gap between cards */
+  width: 80%; /* Set container width */
+}
+
+.card {
+  text-align: center;
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--secondary-color);
+  padding: 1.5em 2em;
+  border-radius: 1rem;
+  box-shadow: 
+      0 0 0 3px var(--primary-color),
+      0 1rem 2rem -0.5rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 
+      0 0 0 4px var(--primary-color),
+      0 1.5rem 2.5rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.card svg {
+  width: 5rem;
+  height: 5rem;
+  fill: var(--primary-color); /* Icon color */
+}
+
+.card h3 {
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  color: var(--text-color); /* Adjust heading color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card-box {
+      grid-template-columns: 1fr; /* Single column on small screens */
+      width: 90%; /* Slightly narrower on smaller screens */
+  }
+}
+
