@@ -60,6 +60,10 @@ header {
     padding: 0.5rem; /* Adjust to desired spacing */
 }
 
+.menuf {background-color: transparent;
+
+}
+
 /* Faint background when scrolled */
 header.scrolled {
     background-color: rgba(0, 0, 0, 0.05); /* Faint background color when scrolled */
@@ -322,6 +326,9 @@ nav a:hover {
     transform: scale(1.1); /* Slightly increase size on hover */
 }
 
+footer p{
+  color:#ccc;
+}
 /* Media Queries */
 
 /* 9. For screens larger than 600px (Tablets) */
