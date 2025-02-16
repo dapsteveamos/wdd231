@@ -31,17 +31,29 @@
 </head>
 <body>
 
-   <header>
-        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
-        <nav class="navigation">
-            <a href="index.html" aria-label="Go to Home page">Home</a>
-            <a href="aboutus.html" aria-label="Learn More About Us">About Us</a>
-            <a href="product.html" aria-label="Order our Product">Products</a>
-            <a href="news.html" aria-label="Update yourself with current News">News</a>
-            <a href="contactus.html" aria-label="Contact Us for More Information">Contact Us</a>
-        </nav>
-        <button class="hamburger">☰</button>
-    </header>
+    <header>
+    <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
+    <nav class="navigation">
+        <a href="index.html" aria-label="Go to Home page">Home</a>
+        <a href="aboutus.html" aria-label="Learn More About Us">About Us</a>
+        <a href="product.html" aria-label="Order our Product">Products</a>
+        <a href="news.html" aria-label="Update yourself with current News">News</a>
+        <a href="contactus.html" aria-label="Contact Us for More Information">Contact Us</a>
+           
+        <div class="dropdown">
+            <a href="directory.html" aria-label="Update yourself with current News">Directory</a>
+            <button class="dropdown-toggle" aria-label="Toggle News dropdown">▼</button>
+            <div class="dropdown-content">
+                <a href="join.html">Join Directory</a>
+            </div>
+        </div>
+       
+
+    </nav>
+    <button class="hamburger">☰</button>
+</header>
+
+    
 
     <main>
 
@@ -271,7 +283,25 @@
 
     <!-- NEW -->
      
-     
+     <!-- WHATSAPP -->
+     <!-- <div id="whatsapp-button">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp" id="whatsapp-icon" width="9%"/>
+        <div id="message-box">
+          <p>Message Steamo Technologies!</p>
+          <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
+        </div>
+      </div> -->
+      <div id="whatsapp-button">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp" id="whatsapp-icon" width="9%" />
+        <div id="message-box">
+          <p>Message Steamo Technologies!</p>
+          <textarea id="message-input" placeholder="Type your message here..."></textarea>
+          <button id="send-button">Send</button>
+          <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
+        </div>
+      </div>
+      
+      
     </main>
 
     <footer>
